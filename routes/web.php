@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/board/{board:slug}', [BoardController::class, 'index'])->name('channel');
+Route::get('/board/{board:slug}', [BoardController::class, 'index'])->name('board');
 Route::post('/board/{board:slug}/dot', [BoardController::class, 'addDot'])->name('dot.store');
 Route::get('test', function () {
     $data = [
